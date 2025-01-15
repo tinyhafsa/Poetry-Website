@@ -1,0 +1,200 @@
+.library-section {
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+    border-top: 15px solid #AFC8AD;
+    border-bottom: 15px solid #AFC8AD;
+}
+
+.author-section, .title-section {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.author-section button, .title-section button {
+    padding: 10px 30px;
+    width: 100%;
+    border-radius: 0;
+    border: none;
+}
+
+/* SCROLLBARS */
+
+.author-section::-webkit-scrollbar, .title-section::-webkit-scrollbar, .content-section::-webkit-scrollbar {
+    width: 5px;
+} 
+.author-section::-webkit-scrollbar-thumb {
+    background: #AFC8AD;
+}
+.author-section::-webkit-scrollbar-track {
+    background: #F2F1EB;
+}
+
+.content-section::-webkit-scrollbar-track{
+    background: #AFC8AD;
+}
+
+/* AUTHOR SECTION */
+.author-section {
+    background-color: #88AB8E;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
+.author-section button {
+    color: #F2F1EB;
+    font-size: 18px;
+}
+.author-section button:hover, .selected-author-button {
+    background-color: #EEE7DA;
+    color: #88AB8E;
+    border: none;
+}
+.selected-author-button {
+    background-color: #EEE7DA !important;
+    color: #88AB8E !important;
+}
+
+/* TITLE SECTION */
+.title-section {
+    background-color: #EEE7DA;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+    overflow-y: auto;
+}
+.title-section button {
+    background-color: #EEE7DA;
+    color: #88AB8E;
+    font-size: 18px;
+}
+.title-section button:hover {
+    background-color: #F2F1EB;
+}
+
+.selected-title-button {
+    background-color: #F2F1EB !important;  /* Enforce the style */
+    color: #88AB8E !important;
+}
+
+/* POEM SECTION */
+.content-section{
+    width: 50%;
+    padding: 30px;
+    background-color: #F2F1EB;
+    justify-items: center;
+    align-content: flex-start;
+    overflow-y: auto;
+    gap: 20px;
+}
+
+.poem-title {
+    text-align: center;
+}
+
+.poem-author {
+    font-size: 12px;
+    font-style: italic;
+    text-align: center;
+    padding: 5px 0px 15px;
+}
+
+.poem-content {
+    font-size: 18px;
+    padding-bottom: 30px;
+}
+
+/* Tablet media query */
+@media screen and (max-width: 769px) {
+    .library-section {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .author-section {
+      flex-direction: row;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 10px;
+      width: 100%;
+      background-color: #88AB8E;
+      justify-content: flex-start;
+      gap: 15px;
+      height: auto;
+    }
+  
+    .title-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 100px 0px;
+      background-color: #F2F1EB;
+      width: 100%;
+    }
+  
+    .title-dropdown {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #88AB8E;
+      border-radius: 5px;
+      background-color: #EEE7DA;
+      color: #88AB8E;
+    }
+  
+    .title-dropdown:focus {
+      outline: none;
+      border-color: #88AB8E;
+      box-shadow: 0 0 5px #88AB8E;
+    }
+  
+    .title-section button {
+      display: none; /* Hide buttons in tablet view */
+    }
+    .content-section {
+        width: 100%;
+            padding: 30px 20px 80px;
+    }
+    .author-section::-webkit-scrollbar {
+        height: 5px; 
+      }
+      .author-section::-webkit-scrollbar-thumb {
+        background: #F2F1EB;
+      }
+      .author-section::-webkit-scrollbar-track {
+        background: #AFC8AD;
+      }
+
+    .content-section h1 {
+        font-size: 25px;
+    }
+    .content-section p {
+        font-size: 18px;
+    }
+    .author-section button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:426px) {
+    .author-section button {
+        font-size: 16px;
+    }
+    .title-section {
+        padding: 30px 50px 0px;
+    }
+    .content-section {
+        padding: 30px 20px 50px;
+    }
+    .content-section h1 {
+        font-size: 20px;
+    }
+    .content-section p {
+        font-size: 16px;
+    }
+}
+  
