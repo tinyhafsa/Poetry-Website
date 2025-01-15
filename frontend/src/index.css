@@ -70,7 +70,7 @@ button {
   overflow: hidden;
 
   /* Over The Hedgehog by Peter Barker */
-  background-image: url("/frontend/src/assets/title.png");
+  background-image: url("./assets/title.png");
 
   background-size: cover;
   background-position: center; 
