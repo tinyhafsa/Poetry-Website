@@ -18,7 +18,7 @@ const SignIn = ({ setUser, handleCloseModal }) => {
     e.preventDefault();
     try {
       const apiUrl = import.meta.env.VITE_API_URL;
-      const response = await axios.post(`${apiUrl}/user/login`, credentials);
+      const response = await axios.post(`${apiUrl}/api/user/login`, credentials);
 
       const user = response.data.user;
       localStorage.setItem('user', JSON.stringify(user)); // Save to localStorage

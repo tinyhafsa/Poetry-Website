@@ -25,7 +25,7 @@ const SignUp = ({ onSignUpComplete }) => {
     e.preventDefault();
     try {
       const apiUrl = import.meta.env.VITE_API_URL;
-      await axios.post(`${apiUrl}/user`, userData);
+      await axios.post(`${apiUrl}/api/user`, userData);
       console.log('User created successfully!');
       
       // Trigger the callback to switch to the login form
