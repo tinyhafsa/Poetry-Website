@@ -5,8 +5,9 @@ import cors from 'cors';
 import userRoutes from './routes/userRoutes.js';
 dotenv.config();
 
+
 const app = express();
-const port = 4000;
+const port = process.env.PORT;
 
 app.use(cors());  // Allow all origins (for debugging purposes)
 app.use(express.json());
