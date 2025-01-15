@@ -6,7 +6,7 @@ Discover new poems with our **random** poem generator, that selects poems from a
 
 Visit our **library** that showcases 15 featured poets and some of their best works.
 
-![image](https://github.com/user-attachments/assets/bec8d062-acac-47ad-b382-9b9bff7b5004)
+![image](https://github.com/user-attachments/assets/38513c31-4d32-4d24-bb12-ee7b48b9e9fb)
 
 ### features
 - sign up and log in functionality
