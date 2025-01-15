@@ -1,0 +1,318 @@
+/* importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* default styles for page */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* default scrollbar style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #88AB8E;
+}
+::-webkit-scrollbar-track {
+  background: #EEE7DA;
+}
+
+/* default element styles */
+h1, h2 {
+  font-family: "Playfair Display", serif;
+  color: #88AB8E;
+}
+
+button, a, h3, input {
+  font-family: "Roboto", serif;
+}
+
+p {
+  font-family: "Crimson Pro", serif;
+}
+
+a {
+  text-decoration: none;
+  color: #88AB8E;
+}
+
+button {
+  background-color: #88AB8E;
+  color: #F2F1EB;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 16px;
+  cursor:pointer ;
+}
+
+/* default main app style */
+.app {
+  min-height: 100vh;
+  padding: 0;
+  background-color: #EEE7DA;
+}
+
+/* LANDING SECTION */
+.landing {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  /* Over The Hedgehog by Peter Barker */
+  background-image: url("C:/Users/syeda/Desktop/Poetry Website/frontend/src/assets/title.png");
+
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  position: relative;
+  border-top: 15px solid #88AB8E;
+  border-bottom: 15px solid #88AB8E;
+}
+
+/* AUTH BUTTONS */
+.auth-buttons {
+  display: flex;
+  gap: 20px;
+  padding: 30px 10px 0px;
+}
+.auth-buttons button:hover{
+  background-color: #EEE7DA;
+  color: #88AB8E;
+}
+
+/* title */
+.heading {
+  background-color: #EEE7DA;
+  padding: 20px 40px;
+  border: 10px solid #88AB8E;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.heading h1 {
+  font-style: italic;
+}
+
+.phoenetics {
+  font-size: 14px;
+}
+.dash {
+  color: #AFC8AD;
+}
+.meaning {
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+
+/* navigation links */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 0px;
+}
+
+/* ABOUT SECTION */
+.about {
+  height: 100vh;
+  border-top: 15px solid #88AB8E;
+  border-bottom: 15px solid #88AB8E;
+  background-color: #F2F1EB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20%;
+}
+
+.about-left img {
+  height: 100%;
+  border: 5px solid #88AB8E;
+  object-fit: cover;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-right p {
+  font-size: 20px;
+}
+
+.about-right span {
+  color: #88AB8E;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* SIGN UP - SIGN IN FORM CONTAINERS */
+
+/* modal backdrop */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #88AB8E79; /* semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* appears above other content */
+  overflow: hidden;
+}
+
+/* modal container */
+.modal-content {
+  background: #EEE7DA; 
+  padding: 20px;
+  border: 10px solid #88AB8E;
+  width: 70vh; 
+  max-width: 80vh;
+  position: relative;
+}
+
+/* close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.close-button button {
+  background: #AFC8AD;
+  color: #F2F1EB;
+}
+
+.close-button button:hover {
+  background: #EEE7DA;
+  color: #88AB8E;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* LOGOUT STATE  */
+.logout-message{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.logout-message p {
+  font-size: 20px;
+  background-color: #EEE7DA;
+  border: 2px solid #88AB8E;
+  padding: 5px 10px;
+}
+
+.logout-message span {
+  color: #88AB8E;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* FOOTER */
+footer{
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+  color: #F2F1EB;
+  background-color: #88AB8E;
+}
+
+/* MEDIA QUERIES */
+
+/* SMALL LAPTOP - 1240 x 546 size screen */
+@media (max-width: 1025px) {
+  .about{
+    padding: 20%;
+    gap: 30px;
+  }
+  .about-left img {
+    height: 300px;
+  }
+  .about-right {
+    gap: 15px;
+  }
+}
+
+/* TABLET - 768 x 546 size screen */
+@media (max-width: 769px) {
+  .about {
+    flex-direction: column;
+  }
+  .about-left img {
+    height: 150px;
+    width: 500px;
+    gap: 10px;
+  }
+  .about-right{
+    gap: 10px;
+  }
+  .about-right h1 {
+    font-size: 25px;
+  }
+  .about-right p {
+    font-size: 16px;
+  }
+}
+
+/* MOBILE - 425 x 546 size screen */
+@media (max-width: 426px) {
+  .heading {
+    padding: 20px;
+  }
+  .heading h1 {
+    font-size: 25px;
+  }
+  .phoenetics {
+    font-size: 12px;
+  }
+  .dash {
+    color: #AFC8AD;
+  }
+  .meaning {
+    font-size: 16px;
+  }
+    .nav-links a{
+    font-size: 16px;
+  }
+  .about-left img {
+    height: 100px;
+    width: 300px;
+  }
+  .modal-content {
+    width: 55vh; 
+  }
+}
+
+@media (max-width:320px) {
+  .about-left img {
+    width: 220px;
+  }
+  .modal-content {
+    width: 52vh; 
+  }
+}
