@@ -308,6 +308,7 @@ footer{
   }
 }
 
+/* MOBILE - 320 x 546 size screen */
 @media (max-width:320px) {
   .about-left img {
     width: 220px;
