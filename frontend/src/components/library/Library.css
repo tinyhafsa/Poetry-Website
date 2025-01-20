@@ -1,3 +1,4 @@
+/* library section */
 .library-section {
     display: flex;
     justify-content: space-between;
@@ -7,13 +8,14 @@
     border-bottom: 15px solid #AFC8AD;
 }
 
+/* author and title lists */
 .author-section, .title-section {
     width: 25%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
+/* author and title buttons */
 .author-section button, .title-section button {
     padding: 10px 30px;
     width: 100%;
@@ -22,7 +24,6 @@
 }
 
 /* SCROLLBARS */
-
 .author-section::-webkit-scrollbar, .title-section::-webkit-scrollbar, .content-section::-webkit-scrollbar {
     width: 5px;
 } 
@@ -36,6 +37,7 @@
 .content-section::-webkit-scrollbar-track{
     background: #AFC8AD;
 }
+
 
 /* AUTHOR SECTION */
 .author-section {
@@ -59,6 +61,7 @@
     color: #88AB8E !important;
 }
 
+
 /* TITLE SECTION */
 .title-section {
     background-color: #EEE7DA;
@@ -75,11 +78,11 @@
 .title-section button:hover {
     background-color: #F2F1EB;
 }
-
 .selected-title-button {
     background-color: #F2F1EB !important;  /* Enforce the style */
     color: #88AB8E !important;
 }
+
 
 /* POEM SECTION */
 .content-section{
@@ -91,30 +94,28 @@
     overflow-y: auto;
     gap: 20px;
 }
-
 .poem-title {
     text-align: center;
 }
-
 .poem-author {
     font-size: 12px;
     font-style: italic;
     text-align: center;
     padding: 5px 0px 15px;
 }
-
 .poem-content {
     font-size: 18px;
     padding-bottom: 30px;
 }
 
+/* MEDIA QUERIES */
 /* Tablet media query */
 @media screen and (max-width: 769px) {
     .library-section {
       flex-direction: column;
       height: auto;
     }
-  
+    /* horizontal scrollable author section*/
     .author-section {
       flex-direction: row;
       overflow-x: auto;
@@ -126,7 +127,6 @@
       gap: 15px;
       height: auto;
     }
-  
     .title-section {
       display: flex;
       justify-content: center;
@@ -135,7 +135,7 @@
       background-color: #F2F1EB;
       width: 100%;
     }
-  
+    /* dropdown menu for titles */
     .title-dropdown {
       width: 100%;
       padding: 10px;
@@ -145,13 +145,11 @@
       background-color: #EEE7DA;
       color: #88AB8E;
     }
-  
     .title-dropdown:focus {
       outline: none;
       border-color: #88AB8E;
       box-shadow: 0 0 5px #88AB8E;
     }
-  
     .title-section button {
       display: none; /* Hide buttons in tablet view */
     }
@@ -159,15 +157,16 @@
         width: 100%;
             padding: 30px 20px 80px;
     }
+    /* scrollbar */
     .author-section::-webkit-scrollbar {
         height: 5px; 
-      }
-      .author-section::-webkit-scrollbar-thumb {
+    }
+    .author-section::-webkit-scrollbar-thumb {
         background: #F2F1EB;
-      }
-      .author-section::-webkit-scrollbar-track {
+    }
+    .author-section::-webkit-scrollbar-track {
         background: #AFC8AD;
-      }
+    }
 
     .content-section h1 {
         font-size: 25px;
@@ -180,6 +179,7 @@
     }
 }
 
+/* mobile l */
 @media (max-width:426px) {
     .author-section button {
         font-size: 16px;

@@ -1,15 +1,18 @@
+// imports
 import React, { useEffect, useState } from 'react'
-import './Poem.css'
+import './Poem.css' // styles
+
+// images
 import image1 from '/src/assets/image1.png'
 import image2 from '/src/assets/image2.png'
 
 
 const Poem = () => {
 
-    // API HANDLING 
+    // api handling
     const [randomPoemData, setRandomPoemData] = useState (null);
 
-    // FETCH RANDOM POEM - FUNCTION
+    // fetch random poem function
     const fetchRandomPoem = async () => {
         try {
           const url = `https://poetrydb.org/random/5`; // fetch 5 random poems
@@ -17,7 +20,7 @@ const Poem = () => {
           const response = await fetch(url);
           const data = await response.json();
       
-          // find a poem with 15 lines or less
+          // find a poem with 30 lines or less
           const suitablePoem = data.find(poem => poem.linecount <= 30);
       
           if (suitablePoem) {
@@ -35,7 +38,7 @@ const Poem = () => {
         fetchRandomPoem();
     }, []);
 
-    // RANDOM POEM SECTION DISPLAY
+    // component
   return (
     <div className='poem' id='random-poem'>
 

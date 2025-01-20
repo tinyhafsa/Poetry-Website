@@ -1,3 +1,4 @@
+/* poem section */
 .poem-section {
     display: flex;
     justify-content: space-between;
@@ -7,11 +8,14 @@
     border-bottom: 15px solid #88AB8E;
 }
 
+/* left and right images */
 .poem-image img {
     width: 300px;
     height: 100%;
     object-fit: cover;
 }
+
+/* poem */
 .one-poem {
     display: flex;
     flex-direction: column;
@@ -35,6 +39,7 @@
 .poem-content p {
     font-size: 16px;
 }
+/* custom scrollbar */
 .poem-content::-webkit-scrollbar{
     width: 5px;
 }
@@ -42,6 +47,8 @@
     background: #F2F1EB;
 }
 
+/* MEDIA QUERIES */
+/* laptop */
 @media (max-width: 1025px) {
     .poem-image img {
         width: 250px;
@@ -54,7 +61,7 @@
     }
 
 }
-
+/* tablet */
 @media (max-width: 769px) {
     .poem-image img {
         width: 150px;
@@ -66,7 +73,7 @@
         font-size: 14px;
     }
 }
-
+/* mobile l */
 @media (max-width: 426px) {
     .poem-section {
         flex-direction: column;
@@ -79,7 +86,7 @@
         transform: rotate(180deg);
     }
 }
-
+/* mobile m */
 @media (max-width:376px) {
     .one-poem {
         padding: 30px 10px;
