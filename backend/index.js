@@ -10,12 +10,15 @@ dotenv.config(); // allows usage of variables in .env file
 const app = express(); // initializes express app
 const port = process.env.PORT; // reads server Port from variable
 
+// CORS options
 const corsOptions = {
-    origin: 'https://poetry-verse.vercel.app', // allow only this frontend
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // allowed HTTP methods
-    credentials: true, // include credentials (if needed)
+    origin: 'https://poetry-verse.vercel.app', // allow only frontend domain
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'], 
+    credentials: true, 
 };
-  
+
+app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));  // allows API to be accessed from different domains
 app.use(express.json()); // parses incoming json request
 
